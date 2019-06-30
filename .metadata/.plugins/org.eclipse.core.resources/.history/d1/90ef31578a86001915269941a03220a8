@@ -1,0 +1,32 @@
+package com.app.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.app.dao.BookInt;
+import com.app.pojos.Book;
+
+import org.springframework.stereotype.Service;
+
+@Service
+@Transactional
+public class Services implements ServiceInt
+{
+	@Autowired
+	
+	private BookInt dao;
+	@Override
+	public List<Book> listbook()
+	{
+		return dao.listbook();
+		
+	}
+
+	@Override
+	public String Registerbook(Book b) 
+	{
+		return dao.Registerbook(b);
+	}
+}

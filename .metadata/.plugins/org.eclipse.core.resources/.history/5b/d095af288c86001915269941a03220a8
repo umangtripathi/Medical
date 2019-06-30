@@ -1,0 +1,30 @@
+package com.app.dao;
+
+import java.util.List;
+
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.app.pojos.Book;
+
+@Repository
+public class Bookdao implements BookInt {
+	
+	@Autowired
+	private SessionFactory sf;
+	
+	public List<Book> listbook()
+	{
+		String jpql="select b from BookCon b "; 
+		
+		return sf.getCurrentSession().createQuery(jpql,Book.class).getResultList();
+	}
+
+	public String Registerbook(Book b)
+	{
+		sf.getCurrentSession().persist(b);
+		return "Book Registered with id::" + b.getBookId();
+		
+	}
+}

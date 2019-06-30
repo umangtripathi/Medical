@@ -1,0 +1,6 @@
+
+Jun 04, 2019 12:10:47.54 NEW SESSION
+Jun 04, 2019 12:10:47.54 [4616:5008:0604/121047.547:ERROR:component_installer.cc(125)] Move failed.: Access is denied. (0x5)
+Jun 04, 2019 12:39:33.14 [4616:1536:0604/123933.145:ERROR:browser_process_sub_thread.cc(217)] Waited 157 ms for network service
+Jun 04, 2019 12:59:36.30 [1240:4084:0604/125936.305:ERROR:browser_process_sub_thread.cc(217)] Waited 130 ms for network service
+Jun 04, 2019 14:14:08.47 [3100:1188:0604/141408.455:ERROR:browser_process_sub_thread.cc(217)] Waited 173 ms for network service

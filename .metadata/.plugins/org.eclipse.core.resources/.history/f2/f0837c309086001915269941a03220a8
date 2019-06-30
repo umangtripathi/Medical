@@ -1,0 +1,46 @@
+package com.app.dao;
+import com.app.pojos;
+
+
+import java.util.List;
+
+import org.apache.catalina.User;
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+@Repository
+public class Userdao implements UserInt 
+{
+	
+	@Autowired
+	private SessionFactory sf;
+	
+/*	public List <User> listUser()
+	{
+		String jpql="select u from UserCon u "; 
+		
+		return sf.getCurrentSession().createQuery(jpql,User.class).getResultList();
+	}
+*/
+	public String RegisterUser(User u)
+	{
+		sf.getCurrentSession().persist(u);
+		return "user Registered with name::" + u.getName();
+		
+	}
+
+	@Override
+	public String RegisterUser(com.app.pojos.User u) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<com.app.pojos.User> listUser() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
+
+}
